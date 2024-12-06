@@ -1,0 +1,144 @@
+/* ---- Styles de base pour la page ---- */
+
+/* Applique une police globale et centre le contenu */
+body {
+    font-family: Arial, sans-serif; /* Police lisible */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0;
+    display: flex; /* Utilisation de Flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background: #f0f0f0; /* Fond gris clair */
+    color: #333; /* Texte en gris foncé */
+  }
+  
+  /* Conteneur principal */
+  .container {
+    text-align: center; /* Centre tout le texte */
+    background: #fff; /* Fond blanc */
+    padding: 40px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 500px; /* Largeur fixe */
+  }
+  
+  /* Titre principal */
+  h1 {
+    font-size: 2.5em; /* Texte grand */
+    margin-bottom: 20px; /* Espacement sous le titre */
+  }
+  
+  /* ---- Styles pour le tableau des scores ---- */
+  
+  /* Conteneur du tableau des scores */
+  .scoreboard {
+    display: flex; /* Affiche les scores côte à côte */
+    justify-content: space-between; /* Les sépare avec de l'espace */
+    margin-bottom: 20px; /* Espacement sous le tableau */
+  }
+  
+  /* Style individuel pour chaque score (joueur et ordinateur) */
+  .scoreboard div {
+    text-align: center; /* Centre le texte */
+    font-size: 1.5em; /* Taille du texte moyenne */
+  }
+  
+  /* ---- Styles pour les choix (Pierre, Feuille, Ciseaux) ---- */
+  
+  /* Conteneur des choix */
+  .choices {
+    display: flex; /* Aligne les choix côte à côte */
+    justify-content: space-around; /* Espace égal entre eux */
+    margin: 30px 0; /* Marges au-dessus et en dessous */
+  }
+  
+  /* Boutons des choix */
+  .choice {
+    flex: 1; /* Chaque bouton prend la même largeur */
+    margin: 0 10px; /* Espacement horizontal */
+    padding: 15px; /* Espacement interne */
+    font-size: 1.5em; /* Texte grand */
+    font-weight: bold; /* Texte en gras */
+    color: #000; /* Texte noir pour contraste */
+    background: #f8f9fa; /* Fond gris très clair */
+    border: 2px solid #343a40; /* Bordure foncée */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Curseur interactif */
+    transition: background 0.3s, transform 0.2s; /* Effet de transition pour hover */
+  }
+  
+  /* Boutons désactivés (après un clic) */
+  .choice:disabled {
+    background: #ccc; /* Fond gris clair */
+    cursor: not-allowed; /* Curseur désactivé */
+  }
+  
+  /* Effet au survol (hover) */
+  .choice:hover:not(:disabled) {
+    background: #d4edda; /* Fond vert clair */
+    transform: scale(1.1); /* Agrandissement léger */
+  }
+  
+  /* ---- Styles pour les boutons "Tour suivant" et "Recommencer" ---- */
+  
+  /* Conteneur des boutons */
+  .buttons {
+    display: flex; /* Aligne les boutons côte à côte */
+    justify-content: space-around; /* Espace égal entre eux */
+    margin-top: 20px; /* Espacement au-dessus */
+  }
+  
+  /* Style des boutons */
+  button {
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 1.2em; /* Texte de taille moyenne */
+    background: #007bff; /* Fond bleu */
+    color: #fff; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Curseur interactif */
+    transition: background 0.3s, transform 0.2s; /* Effet de transition */
+  }
+  
+  /* Effet de survol pour les boutons */
+  button:hover {
+    background: #0056b3; /* Fond bleu foncé */
+    transform: scale(1.1); /* Agrandissement léger */
+  }
+  
+  /* Boutons masqués */
+  button.hidden {
+    display: none; /* Masque le bouton */
+  }
+  
+  /* ---- Couleurs spécifiques pour les choix ---- */
+  
+  /* Fond rouge clair pour "Pierre" */
+  .choice[data-choice="pierre"] {
+    background: #ffcccb;
+  }
+  
+  /* Fond vert clair pour "Feuille" */
+  .choice[data-choice="feuille"] {
+    background: #d4edda;
+  }
+  
+  /* Fond bleu clair pour "Ciseaux" */
+  .choice[data-choice="ciseaux"] {
+    background: #cce5ff;
+  }
+  
+  /* Effets au survol pour chaque choix */
+  .choice[data-choice="pierre"]:hover:not(:disabled) {
+    background: #ff9999; /* Rouge foncé */
+  }
+  
+  .choice[data-choice="feuille"]:hover:not(:disabled) {
+    background: #a5d6a7; /* Vert foncé */
+  }
+  
+  .choice[data-choice="ciseaux"]:hover:not(:disabled) {
+    background: #99cfff; /* Bleu foncé */
+  }
+  

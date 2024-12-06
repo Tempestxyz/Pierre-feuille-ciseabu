@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre Papier Ciseaux</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div class="scoreboard">
+      <div>
+        <h2>Vous</h2>
+        <p id="player-score">0</p>
+      </div>
+      <div>
+        <h2>Ordinateur</h2>
+        <p id="computer-score">0</p>
+      </div>
+    </div>
+    <p id="message">À vous de jouer !</p>
+    <div class="choices">
+      <button class="choice" data-choice="pierre">✊ Pierre</button>
+      <button class="choice" data-choice="feuille">✋ Feuille</button>
+      <button class="choice" data-choice="ciseaux">✌️ Ciseaux</button>
+    </div>
+    <div class="buttons">
+      <button id="next-round" class="hidden">Tour suivant</button>
+      <button id="restart" class="hidden">Recommencer</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
